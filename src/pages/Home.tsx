@@ -48,7 +48,8 @@ Natural incense selected to purify your space,  uplift your spirit and create a 
             <div key={product.id} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <ProductCard
                 product={product}
-                onClick={() => {
+onClick={() => {
+                  console.log('Opening modal for incense product:', product.name);
                   setSelectedProduct(product);
                   trackPageView('incense-product');
                 }}
@@ -94,7 +95,8 @@ Discover a unique collection of cards that desgined to help you to connect to yo
             <div key={product.id} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <ProductCard
                 product={product}
-                onClick={() => {
+onClick={() => {
+                  console.log('Opening modal for cards product:', product.name);
                   setSelectedProduct(product);
                   trackPageView('cards-product');
                 }}

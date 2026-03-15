@@ -1,11 +1,12 @@
-# Product Cards Fix - TODO
+# TODO: Fix Order Now Button & Form
 
-## Plan Steps (Approved by user):
-- [x] Step 1: Edit src/App.css to fix CSS syntax error (complete .product-card rule, add full card/grid styles).
-- [x] Step 2: Test build with `npm run build` (verify no errors).
-- [x] Step 3: Improve .products-grid responsiveness and left-alignment.
-- [x] Step 4: Update this TODO with progress after each step.
-- [x] Step 5: Final test/deploy, mark complete.
+## Steps:
+1. [x] Add debug logs to Home.tsx onClick handlers
+2. [x] Force modal CSS visibility in App.css  
+3. [ ] Add DB submit logs to OrderModal.tsx
+4. [ ] Test button click - check console
+5. [ ] Verify modal appears + form submits to Supabase 'orders' table
+6. [ ] Remove debug logs if working
+7. [ ] attempt_completion
 
-✅ All steps complete! CSS syntax fixed, build should succeed, product cards now have responsive grid (1-4 cols), left-aligned with good spacing/distribution, hover effects, full styles.
-
+Current progress: Starting edits...

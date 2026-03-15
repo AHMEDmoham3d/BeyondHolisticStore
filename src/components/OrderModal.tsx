@@ -49,7 +49,11 @@ export const OrderModal: React.FC<OrderModalProps> = ({ product, onClose }) => {
         .from('orders')
         .insert([orderData]);
 
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase insert error:', error);
+        throw error;
+      }
+      console.log('Order submitted successfully!');
 
       setSuccess(true);
       setTimeout(() => {
