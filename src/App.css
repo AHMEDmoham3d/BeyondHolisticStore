@@ -698,3 +698,19 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 48px;
   }
 }
+
+/* Hero subtitle enhancement */
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+  line-height: 1.8;
+  color: var(--text-gray);
+}
+
+@media (max-width: 768px) {
+  .hero p {
+    font-size: 16px;
+  }
+}
