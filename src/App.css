@@ -663,3 +663,38 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(109, 40, 217, 0.4);
 }
+
+/* Hero title enhancement */
+@keyframes shimmer {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 200%;
+  }
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--text-white) 0%, var(--accent-gold-light) 50%, var(--text-white) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+  background-size: 200% auto;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+}
