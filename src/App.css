@@ -714,3 +714,41 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
   }
 }
+
+/* Footer styles */
+.footer {
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-gray);
+  padding: 40px 40px 30px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content p:first-child {
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px 20px;
+  }
+  
+  .footer-content p {
+    font-size: 0.95rem;
+  }
+}
