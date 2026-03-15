@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from '../lib/supabase';
 
-interface Order {
+  interface Order {
   id: number;
   created_at: string;
   name: string;
   number: string;
   adres: string;
-  count: number;
+  count: string;
   type: string;
   notes: string;
+  delivery_date?: string;
 }
 
 export const Admin: React.FC = () => {
@@ -23,20 +24,6 @@ export const Admin: React.FC = () => {
   }, [refreshTrigger]);
 
   const fetchData = async () => {
-    // SECURITY: Check password first
-    const savedPassword = localStorage.getItem('adminPassword');
-    if (!savedPassword) {
-      const password = prompt('Enter admin password (first time sets it):');
-      if (!password) return;
-      localStorage.setItem('adminPassword', btoa(password)); // Simple base64
-      return fetchData();
-    }
-    const inputPassword = prompt('Admin Password:');
-    if (inputPassword && btoa(inputPassword) !== savedPassword) {
-      setError('❌ Invalid password. Access denied.');
-      return;
-    }
-
     setLoading(true);
     setError(null);
     
@@ -44,7 +31,8 @@ export const Admin: React.FC = () => {
       const { data, error } = await supabase
         .from('orders')
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false })
+        .limit(100);
 
       if (error) {
         console.error('Supabase error:', error);
