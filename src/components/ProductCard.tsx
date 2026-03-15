@@ -71,14 +71,20 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
 <div className="product-content">
         <div className="product-category">{product.category}</div>
         <h3 className="product-title">{product.name}</h3>
-        <p 
-          className={`product-description ${isArabic ? 'arabic' : ''}`}
+        <ul 
+          className={`description-list ${isArabic ? 'arabic' : ''}`}
           style={{
-            direction: isArabic ? 'rtl' : 'ltr',
-            textAlign: isArabic ? 'right' : 'left'
+            direction: isArabic ? 'rtl' : 'ltr'
           }}
-          dangerouslySetInnerHTML={{ __html: product.description.replace(/\n/g, '<br>') }} 
-        />
+        >
+          {product.description.split('\n').map((line, index) => {
+            const trimmed = line.trim();
+            if (trimmed) {
+              return <li key={index} className="description-item">{trimmed}</li>;
+            }
+            return null;
+          })}
+        </ul>
         <div className="product-footer">
           <div className="product-price">{product.price} L.E</div>
           <button className="product-btn" onClick={onClick}>
@@ -89,4 +95,3 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
     </div>
   );
 };
-

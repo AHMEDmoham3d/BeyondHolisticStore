@@ -620,15 +620,33 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-white);
 }
 
-.product-description {
+.description-list {
   font-size: 0.9rem;
   color: var(--text-gray);
   line-height: 1.6;
   margin-bottom: 1.25rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  padding: 0 0 0 1.2em;
+  max-height: 6em;
+  overflow-y: auto;
+  list-style-position: outside;
+}
+
+.description-list.arabic {
+  padding: 0 1.2em 0 0;
+}
+
+.description-item {
+  margin-bottom: 0.3rem;
+  word-break: break-word;
+}
+
+.description-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.description-list::-webkit-scrollbar-thumb {
+  background: var(--text-gray);
+  border-radius: 1.5px;
 }
 
 .product-footer {
