@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Admin } from './pages/Admin';
@@ -7,11 +7,16 @@ import { ConstellationBackground } from './components/ConstellationBackground';
 import './App.css';
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     initAnalytics();
   }, []);
 
-  // Generate random dots for background animation
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   const dots = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     style: {
@@ -25,16 +30,12 @@ function App() {
   return (
     <Router>
       <div className="app">
-        {/* Constellation Background with Lines */}
         <ConstellationBackground />
         
-        {/* Animated Background (Orbs) */}
         <div className="background-animation">
-          {/* Glowing Orbs */}
           <div className="orb orb-1"></div>
           <div className="orb orb-2"></div>
           <div className="orb orb-3"></div>
-          {/* Animated Dots */}
           {dots.map((dot) => (
             <div key={dot.id} className="dot" style={dot.style}></div>
           ))}
@@ -45,7 +46,12 @@ function App() {
             <Link to="/" className="logo">
               ✨ Beyond Holistic
             </Link>
-            <nav className="nav">
+            <button className="hamburger" onClick={toggleMobileMenu} aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
               <a href="#incense">Incense</a>
               <a href="#oils">Oils</a>
               <a href="#cards">Cards</a>
@@ -57,7 +63,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-<Route path="/omni4-st0r3-m4n4g3r-p4n3l-v2" element={<Admin />} />
+            <Route path="/omni4-st0r3-m4n4g3r-p4n3l-v2" element={<Admin />} />
           </Routes>
         </main>
 
@@ -73,3 +79,4 @@ function App() {
 }
 
 export default App;
+
