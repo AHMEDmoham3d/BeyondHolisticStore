@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
         <div className="section-header animate-fade-in-up">
           <h2 className="section-title">Sacred Incense Collection</h2>
           <p className="section-subtitle">
-Natural incense selected to purify your space,  uplift your spirit and create a peaceful stmosphere for meditation, rituals and everyday moments 
+Natural incense selected to purify your space,  uplift your spirit and create a peaceful atmosphere for meditation, rituals and everyday moments 
           </p>
         </div>
         <div className="products-grid">
