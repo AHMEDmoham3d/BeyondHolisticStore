@@ -488,9 +488,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .description-list {
-  font-size: 0.9rem;
-  color: var(--text-gray);
-  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  line-height: 1.7;
   margin-bottom: 1.25rem;
   padding: 0 0 0 1.2em;
   max-height: 6em;
@@ -503,7 +504,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .description-item {
-  margin-bottom: 0.3rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
   word-break: break-word;
 }
 
