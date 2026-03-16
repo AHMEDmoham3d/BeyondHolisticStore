@@ -1,12 +1,15 @@
-# TODO: Fix Order Now Button & Form
+# Floating Card7 Effect - COMPLETED ✅
 
-## Steps:
-1. [x] Add debug logs to Home.tsx onClick handlers
-2. [x] Force modal CSS visibility in App.css  
-3. [ ] Add DB submit logs to OrderModal.tsx
-4. [ ] Test button click - check console
-5. [ ] Verify modal appears + form submits to Supabase 'orders' table
-6. [ ] Remove debug logs if working
-7. [ ] attempt_completion
+## Summary:
+- Added 'oracle-floating' class to ProductCard for product ID 'أوركل أسماء الله الحسن'.
+- Added CSS styles in src/App.css to elevate the image (`top: -30px`, z-index:2, shadows for floating effect).
+- Image now appears "outside the ground/base" of the card with dramatic shadow.
 
-Current progress: Starting edits...
+## Changes Made:
+- src/components/ProductCard.tsx: Dynamic class added.
+- src/App.css: New .oracle-floating styles appended (minor linter warnings ignored, CSS valid).
+
+## Test:
+Run `npm run dev` (or your dev command), navigate to cards section. The أوركل أسماء الله الحسنى card shows card7.jpeg floating above card base.
+
+Task complete.

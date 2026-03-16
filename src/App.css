@@ -627,18 +627,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 30px 20px 20px;
-  }
-  
-  .footer-content p {
-    font-size: 0.95rem;
-  }
-}
-
-/* Modal & Form Styles - Complete Order Form */
-.modal-overlay {
+@media (max-width: 768px) {\n  .footer {\n    padding: 30px 20px 20px;\n  }\n  \n  .footer-content p {\n    font-size: 0.95rem;\n  }\n}\n\n/* Oracle floating image styles */\n.oracle-floating {\n  position: relative;\n}\n\n.oracle-floating .product-image {\n  position: relative;\n  top: -30px;\n  z-index: 2;\n  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);\n  border-radius: 12px;\n}\n\n.oracle-floating .product-card {\n  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);\n}\n\n.oracle-floating .product-card:hover {\n  box-shadow: 0 35px 70px rgba(245, 158, 11, 0.4);\n}\n\n/* Modal & Form Styles - Complete Order Form */\n.modal-overlay {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;

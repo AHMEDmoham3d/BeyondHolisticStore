@@ -26,7 +26,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) =>
 
   return (
 <div className="product-card">
-      <div className="product-image-container" onClick={onClick}>
+<div className={`product-image-container ${product.id === 'أوركل أسماء الله الحسن' ? 'oracle-floating' : ''}`} onClick={onClick}>
         <img
           src={images[currentImageIndex]}
           alt={`${product.name} - Image ${currentImageIndex + 1}`}
