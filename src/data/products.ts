@@ -88,6 +88,7 @@ Its scent is warm and woody with a light touch of sweetness and citrus
 
 • المجموعه تحتوى على:
 • 🕯️99 كارت  + شرح لمعنى كل اسم + عدد مقترح لترديد الاسم + كيفيه أستخدام الكروت
+• خاتم التسبيح 
 
 • ✨🎁 مناسبة جدا ل :
 
@@ -98,7 +99,7 @@ Its scent is warm and woody with a light touch of sweetness and citrus
 
 `,
 
-    price: 1500,
+    price: 1400,
     image: '/card7.jpeg,/card8.jpeg,/card5.jpeg,/card3.jpeg,/card2.jpeg,/card1.jpeg',
     category: 'cards',
   },
