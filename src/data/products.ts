@@ -100,7 +100,7 @@ Its scent is warm and woody with a light touch of sweetness and citrus
 `,
 
     price: 1400,
-    image: '/card7.jpeg,/card8.jpeg,/card5.jpeg,/card3.jpeg,/card2.jpeg,/card1.jpeg',
+    image: '/card7.jpeg,/card9.jpeg,/card6.jpeg,/card2.jpeg',
     category: 'cards',
   },
   {
